@@ -29,8 +29,8 @@ const corsOptions = {
   origin: "http://localhost:1234",
   credentials: true, // If you need to include credentials like cookies
 };
-app.use(cors(corsOptions));
-
+// app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json()); // for accepting JSON request while API calls
 app.use(cookieParser()); // for parsing cookies
 
@@ -48,6 +48,8 @@ app.use((err, req, res, next) => {
   const errorMessage = err.message || "!";
   return res.status(errorStatus).send(errorMessage);
 });
+
+const port = process.env.PORT || 8800;
 
 app.listen(8800, () => {
   connectDB();

@@ -3,7 +3,7 @@ import { showErrorAlert } from "./alerts";
 import { LogoutUser } from "../api/restapi";
 
 const newRequest = axios.create({
-  baseURL: "http://localhost:8800/api",
+  baseURL: "https://greatgigs.onrender.com/api",
   withCredentials: true,
 });
 

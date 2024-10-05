@@ -1,5 +1,5 @@
 {
-  "homepage": "https://abhisonicode.github.io/GreatGigs",
+  "homepage": "https://abhisonicode.github.io/GreatGigs/",
   "name": "GreatGigs",
   "version": "1.0.0",
   "type": "module",
@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "parcel index.html",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "start": "rimraf .parcel-cache && parcel index.html",
-    "build": "parcel build index.html --dist-dir build"
+    "build": "parcel build index.html"
   },
   "author": "Abhishek Soni",
   "license": "ISC",

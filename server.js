@@ -26,7 +26,7 @@ const connectDB = async () => {
 
 // Allow requests from your React app's origin
 const corsOptions = {
-  origin: "https://great-gigs.vercel.app",
+  origin: "https://greatgigs.vercel.app",
   credentials: true, // If you need to include credentials like cookies
 };
 app.use(cors(corsOptions));

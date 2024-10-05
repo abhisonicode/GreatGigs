@@ -7,7 +7,6 @@ import Loader from "../../components/loader/Loader";
 import { ApiStatus } from "../../models/ApiResponse";
 
 const Gigs = () => {
-  const [AllGigs, setAllGigs] = useState([]);
   const { search } = useLocation();
   const minRef = useRef();
   const maxRef = useRef();
@@ -16,7 +15,7 @@ const Gigs = () => {
   const searchQuery = params.get("search");
   const category = params.get("cat");
 
-  const { isLoading, error, refetch } = useQuery({
+  const { data, isLoading, error, refetch } = useQuery({
     queryKey: [`all-gigs`],
     queryFn: async () => {
       const res = await fetchGigs({
@@ -26,9 +25,9 @@ const Gigs = () => {
         sort,
       });
       if (res?.data.status == ApiStatus.success) {
-        setAllGigs(res.data.data);
+        return res.data.data;
       }
-      return res.data;
+      return [];
     },
   });
 
@@ -121,10 +120,10 @@ const Gigs = () => {
             <div className="col-span-4 text-center my-12">
               Something went wrong!
             </div>
-          ) : AllGigs.length === 0 ? (
+          ) : data.length === 0 ? (
             <div className="col-span-4 text-center my-12">No gigs found!</div>
           ) : (
-            AllGigs.map((gig) => {
+            data.map((gig) => {
               return <GigCard key={gig._id} gig={gig}></GigCard>;
             })
           )}

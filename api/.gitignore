@@ -1,6 +1,0 @@
-# Build
-node_modules
-dist
-
-# Credentials
-.env

@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "parcel index.html",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "start": "rimraf .parcel-cache && parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir build"
   },
   "author": "Abhishek Soni",
   "license": "ISC",

@@ -26,11 +26,10 @@ const connectDB = async () => {
 
 // Allow requests from your React app's origin
 const corsOptions = {
-  origin: "http://localhost:1234",
+  origin: "https://greatgigs.onrender.com",
   credentials: true, // If you need to include credentials like cookies
 };
-// app.use(cors(corsOptions));
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json()); // for accepting JSON request while API calls
 app.use(cookieParser()); // for parsing cookies
 

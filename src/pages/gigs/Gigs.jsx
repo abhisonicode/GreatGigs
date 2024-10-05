@@ -33,7 +33,6 @@ const Gigs = () => {
 
   const applyFilters = () => {
     refetch();
-    // if (minRef.current.value || maxRef.current.value) refetch();
   };
 
   const handleSortChange = (e) => {
@@ -90,7 +89,7 @@ const Gigs = () => {
           />
           <button
             onClick={applyFilters}
-            className="text-white bg-[#1dbf73] hover:bg-[#19a463] px-9 py-3 rounded-lg"
+            className="text-white bg-[#2a67ca] hover:bg-[#2b5aa4] px-9 py-3 rounded-lg"
           >
             Apply
           </button>
@@ -112,23 +111,21 @@ const Gigs = () => {
 
       {/* Gig Cards */}
 
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 2xl:grid-cols-4 gap-8">
-          {error ? (
-            <div className="col-span-4 text-center my-12">
-              Something went wrong!
-            </div>
-          ) : data.length === 0 ? (
-            <div className="col-span-4 text-center my-12">No gigs found!</div>
-          ) : (
-            data.map((gig) => {
-              return <GigCard key={gig._id} gig={gig}></GigCard>;
-            })
-          )}
-        </div>
-      )}
+      {isLoading && <Loader />}
+
+      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 2xl:grid-cols-4 gap-8">
+        {error ? (
+          <div className="col-span-4 text-center my-12">
+            Something went wrong!
+          </div>
+        ) : data.length === 0 ? (
+          <div className="col-span-4 text-center my-12">No gigs found!</div>
+        ) : (
+          data.map((gig) => {
+            return <GigCard key={gig._id} gig={gig}></GigCard>;
+          })
+        )}
+      </div>
     </div>
   );
 };

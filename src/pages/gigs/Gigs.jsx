@@ -89,7 +89,7 @@ const Gigs = () => {
           />
           <button
             onClick={applyFilters}
-            className="text-white bg-[#2a67ca] hover:bg-[#2b5aa4] px-9 py-3 rounded-lg"
+            className="text-white bg-[#3b82f6] hover:bg-[#2a67ca] px-9 py-3 rounded-lg"
           >
             Apply
           </button>
@@ -118,10 +118,10 @@ const Gigs = () => {
           <div className="col-span-4 text-center my-12">
             Something went wrong!
           </div>
-        ) : data.length === 0 ? (
+        ) : data?.length === 0 ? (
           <div className="col-span-4 text-center my-12">No gigs found!</div>
         ) : (
-          data.map((gig) => {
+          data?.map((gig) => {
             return <GigCard key={gig._id} gig={gig}></GigCard>;
           })
         )}

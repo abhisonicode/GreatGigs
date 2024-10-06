@@ -16,9 +16,5 @@
     "api/**/*.js": {
       "maxDuration": 60
     }
-  },
-  "cors": {
-    "origin": ["https://greatgigs.vercel.app"],
-    "credentials": true
   }
 }

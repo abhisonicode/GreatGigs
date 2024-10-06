@@ -87,7 +87,11 @@ export const Login = async (req, res, next) => {
 
     const { password, ...details } = user._doc;
     res
-      .cookie("accessToken", token, { httpOnly: true, sameSite: "None" })
+      .cookie("accessToken", token, {
+        httpOnly: true,
+        secure: true,
+        sameSite: "None",
+      })
       .status(200)
       .send(apiResponse(ApiStatus.SUCCESS, details, ""));
   } catch (error) {

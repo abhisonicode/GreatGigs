@@ -48,7 +48,7 @@ app.use((err, req, res, next) => {
   return res.status(errorStatus).send(errorMessage);
 });
 
-const PORT = process.env.PORT || 8800;
+const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
   connectDB();

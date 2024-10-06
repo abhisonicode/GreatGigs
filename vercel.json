@@ -1,17 +1,24 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server.js"
+    }
+  ],
   "functions": {
-    "server.js": {
+    "api/**/*.js": {
       "maxDuration": 60
     }
   },
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "server.js"
-    }
-  ]
+  "cors": {
+    "origin": ["https://greatgigs.vercel.app"],
+    "credentials": true
+  }
 }

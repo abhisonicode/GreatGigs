@@ -1,7 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "routes/*.js": {
+    "/*.js": {
       "maxDuration": 60
     }
   },

@@ -198,7 +198,16 @@ const Navbar = () => {
             <div className="container mx-auto py-3 hidden md:block">
               <ul className=" flex justify-center items-center gap-x-6 cursor-pointer text-base">
                 {BaseCategories.slice(0, 4).map((category) => {
-                  return <li key={category}> {category} </li>;
+                  return (
+                    <li
+                      onClick={() => {
+                        navigate("/gigs?search=" + category);
+                      }}
+                      key={category}
+                    >
+                      {category}
+                    </li>
+                  );
                 })}
               </ul>
             </div>

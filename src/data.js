@@ -2,7 +2,7 @@ export const noAvatarUrl =
   "https://img.icons8.com/ios-filled/dddddd/50/user-male-circle.png";
 
 export const BaseCategories = [
-  "Graphics & Design",
+  "Graphic & Design",
   "Digital Marketing",
   "Writing & Translation",
   "Video & Animation",
@@ -80,7 +80,7 @@ export const cardsData = [
 export const categoriesData = [
   {
     icon: "",
-    title: "Graphics & Design",
+    title: "Graphic & Design",
   },
   {
     icon: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/graphics-design.91dfe44.svg",

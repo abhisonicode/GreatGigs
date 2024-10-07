@@ -70,7 +70,7 @@ const Register = () => {
   }
 
   return (
-    <div className="max-w-screen-2xl mx-auto py-12 px-8 md:py-16 md:px-16">
+    <div className="max-w-screen-2xl mx-auto py-12 px-8 md:py-16 md:px-16 min-h-screen">
       <div className="flex flex-col items-center justify-center">
         <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-6xl xl:p-0   ">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Message = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto py-12 px-8 md:py-16 md:px-16">
+    <div className="max-w-screen-2xl mx-auto py-12 px-8 md:py-16 md:px-16 min-h-screen">
       <div className="flex items-center gap-x-3 mb-4">
         <Link to="/messages" className="underline">
           Messages

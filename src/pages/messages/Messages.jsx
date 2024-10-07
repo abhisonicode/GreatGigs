@@ -9,7 +9,7 @@ const Messages = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl mx-auto py-12 px-8 md:py-16 md:px-16">
+    <div className="max-w-screen-2xl mx-auto py-12 px-8 md:py-16 md:px-16 min-h-screen">
       <div className="flex justify-between mb-6">
         <h1 className="font-bold text-2xl">Messages</h1>
       </div>

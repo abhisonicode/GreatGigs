@@ -81,6 +81,11 @@ const Add = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (state.images.length === 0) {
+      showErrorAlert("Please upload images!");
+      return;
+    }
     if (
       !state.cover ||
       !state.title ||
@@ -92,7 +97,6 @@ const Add = () => {
       !state.shortDesc ||
       !state.deliveryTime ||
       !state.revisionNumber ||
-      state.images.length === 0 ||
       state.features.length === 0
     ) {
       showErrorAlert("All fields are required!");
@@ -103,7 +107,7 @@ const Add = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl mx-auto py-12 px-8 md:py-16 md:px-16">
+    <div className="max-w-screen-2xl mx-auto py-12 px-8 md:py-16 md:px-16 min-h-screen">
       <div className="flex justify-between mb-6">
         <h1 className="font-bold text-2xl">Add New Gig</h1>
       </div>
@@ -140,7 +144,7 @@ const Add = () => {
               id="category"
               className="bg-gray-50 border text-sm rounded-lg cursor-pointer text-gray-900 focus:outline-none border-gray-300 placeholder-gray-400 block w-full p-2.5"
             >
-              <option value="graphic-design">Graphics & Design</option>
+              <option value="graphic-design">Graphic & Design</option>
               <option value="digital-marketing">Digital Marketing</option>
               <option value="writing-translation">Writing & Translation</option>
               <option value="video-animation">Video & Animation</option>

@@ -19,7 +19,7 @@ const Carousel = (props) => {
     <>
       <div className={`${customClasses ? customClasses : ""}`}>
         <div
-          className={`max-w-screen-2xl mx-auto py-10 sm:py-12 md:py-20 px-8 sm:px-12 md:px-12 Round-Arrow-Dots`}
+          className={`max-w-screen-2xl mx-auto py-10 sm:py-12 md:py-20 px-5 sm:px-12 md:px-12 Round-Arrow-Dots`}
         >
           <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center mr-8">
             <h2 className="font-bold text-3xl mb-8">{heading}</h2>

@@ -16,7 +16,7 @@ const Gigs = () => {
   const category = params.get("cat");
 
   const { data, isLoading, error, refetch } = useQuery({
-    queryKey: [`all-gigs`],
+    queryKey: [`all-gigs-${search}`],
     queryFn: async () => {
       const res = await fetchGigs({
         search,

@@ -72,12 +72,12 @@ const Gig = () => {
     }
   };
 
-  if (!data) {
-    return <div className="my-12 text-center w-full"> Gig Not Found!</div>;
-  }
-
   if (isLoading) {
     return <Loader />;
+  }
+
+  if (!data) {
+    return <div className="my-12 text-center w-full"> Gig Not Found!</div>;
   }
 
   return (
@@ -205,7 +205,7 @@ const Gig = () => {
           {/* Pricing Section */}
           <div className="basis-1/3">
             <div className="border border-zinc-300 rounded-md p-6 flex flex-col gap-y-4 sticky top-40 shadow-2xl">
-              <div className="flex justify-between gap-x-4">
+              <div className="flex flex-col md:flex-row justify-between gap-x-4">
                 <div className="font-bold text-base whitespace-normal break-words">
                   {data.shortTitle}
                 </div>
@@ -214,7 +214,7 @@ const Gig = () => {
                 </div>
               </div>
               <span>{data.shortDesc}</span>
-              <div className="flex justify-between font-bold">
+              <div className="flex flex-col md:flex-row gap-y-3 justify-between font-bold">
                 <div>⏲️ {data.deliveryTime} days delivery</div>
                 <div>♻️ {data.revisionNumber} revisions</div>
               </div>
